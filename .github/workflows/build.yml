@@ -26,6 +26,6 @@ jobs:
         run: pyinstaller --clean --noconfirm ActivityCapture.spec
 
       - name: Upload exe to release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: dist/ActivityCapture.exe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload ${{ github.event.release.tag_name }} dist/ActivityCapture.exe --repo ${{ github.repository }} --clobber
