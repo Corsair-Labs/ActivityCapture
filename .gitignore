@@ -1,0 +1,16 @@
+# Build output
+dist/
+build/
+*.exe
+
+# PyInstaller
+*.spec.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/

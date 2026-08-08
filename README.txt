@@ -12,3 +12,18 @@ activity_capture.py:
 
 Anyone with Python installed can run this file directly (`python activity_capture.py`)
 and confirm it behaves identically to the .exe.
+
+This folder also includes everything needed to rebuild ActivityCapture.exe from scratch
+and verify it matches:
+
+  - requirements.txt        pinned dependency versions
+  - ActivityCapture.spec    PyInstaller build spec (exact build config used)
+  - Makefile                 build script for `make` users (Git Bash / WSL)
+  - .github/workflows/       GitHub Actions pipeline that builds the exe automatically
+                              when a new GitHub Release is created
+
+To build it yourself: run `make build` from this folder (requires Git Bash or WSL).
+The result lands in `dist/ActivityCapture.exe`.
+
+Download pre-built releases from:
+  https://github.com/Corsair-Labs/ActivityCapture/releases
